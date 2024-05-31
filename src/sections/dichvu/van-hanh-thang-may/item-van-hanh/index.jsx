@@ -1,5 +1,5 @@
 'use client'
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import Image from 'next/image'
 import './styles.css'
 
@@ -11,8 +11,8 @@ const ItemOperate = ({data}) => {
   }
 
   return (
-<Fade duration={2500}>
-<div
+    <Fade duration={2500}>
+      <div
         className='relative group itemOper rounded-[0.75rem] overflow-hidden max-md:h-[22.1rem] h-[22.125rem]'
         onClick={handleSeeAll}
       >
@@ -52,7 +52,7 @@ const ItemOperate = ({data}) => {
           </div>
         </div>
       </div>
-</Fade>
+    </Fade>
   )
 }
 

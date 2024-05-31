@@ -1,5 +1,5 @@
 'use client'
-import React, {useEffect, useRef, useState} from 'react'
+import {useEffect, useRef, useState} from 'react'
 
 function useCount({num, text, desc}) {
   const [isVisible, setIsVisible] = useState(false)

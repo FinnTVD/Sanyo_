@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import {Swiper, SwiperSlide} from 'swiper/react'
@@ -216,7 +216,7 @@ const DetailElevator = ({type = false, data, title, isJapan = false}) => {
         >
           <Link
             className='linkdowloadDE flex px-[2.44rem] bg-yellow-500 items-center w-fit rounded-full mb-[3.23rem]'
-            href={`${data?.thong_so?.link}`}
+            href={`${data?.thong_so?.link || '/'}`}
             target='_blank'
           >
             <span className='font-Iciel text-[0.875rem] text-grey-900 leading-1.5 font-medium mr-[0.81rem]'>

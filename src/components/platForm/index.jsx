@@ -1,4 +1,5 @@
-import React, {forwardRef} from 'react'
+'use client'
+import {forwardRef} from 'react'
 import Content from './content/Content'
 import Slider from './slider/Slider'
 import './style.css'

@@ -1,5 +1,5 @@
 'use client'
-import React, {useState} from 'react'
+import {useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import ButtonSlide from '@/components/buttonSlideSixReasons/ButtonSLide'
@@ -136,7 +136,7 @@ const HeaderDetailElevator = ({data, title}) => {
                 </span>
               </div>
               <Link
-                href={`${data?.link}`}
+                href={`${data?.link || '/'}`}
                 target='_blank'
                 className='dowloadElevator absolute left-full bottom-[13%] w-[13.9375rem] h-[3.9375rem] flex items-center justify-center cursor-pointer '
               >
@@ -258,7 +258,7 @@ const HeaderDetailElevator = ({data, title}) => {
         </div>
         <Fade triggerOnce>
           <Link
-            href={`${data?.link}`}
+            href={`${data?.link || '/'}`}
             target='_blank'
             className='md:hidden bg-[linear-gradient(180deg,_#D1B37B_0%,_#E4B867_100%)] w-[5.375rem] h-[5.375rem] rounded-[50%] flex items-center justify-center flex-col absolute -top-[3.8rem] right-[3rem] z-10'
           >

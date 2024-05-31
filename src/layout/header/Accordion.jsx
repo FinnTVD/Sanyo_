@@ -1,3 +1,4 @@
+'use client'
 import {useEffect, useRef, useState} from 'react'
 import AccordionLink from './AccordionLink'
 import Link from 'next/link'
@@ -71,7 +72,7 @@ export default function Accordion({
             <>
               <div className='w-full h-[0.0625rem] opacity-50 bg-grey-0/10' />
               <Link
-                href={href}
+                href={href || '/'}
                 className='flex flex-row items-center text-0.875 text-yellow-500 font-Iciel leading-1.5 font-medium mx-auto pt-2'
                 onClick={() => setIsOpenModalMenu(false)}
               >

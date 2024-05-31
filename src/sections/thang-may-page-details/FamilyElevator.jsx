@@ -1,4 +1,3 @@
-import React from 'react'
 import HeaderDetailElevator from './headerDetailElevator'
 import ConnectLove from './connectLoves/ConnectLove'
 import ListElevator from './listElevator'

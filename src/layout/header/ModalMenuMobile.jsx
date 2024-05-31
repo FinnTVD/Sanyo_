@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -6,9 +7,7 @@ import {
   modalMenuService,
 } from '../../../data/header/modal-menu'
 import Accordion from './Accordion'
-import LangDropdownPopup from '@/components/header/LangDropdownPopup'
 import {createPortal} from 'react-dom'
-import GoogleTranslate from '@/components/Language'
 
 export default function ModalMenuMobile({
   isOpenModalMenu,

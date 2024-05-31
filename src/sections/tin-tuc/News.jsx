@@ -97,7 +97,7 @@ export default function News({
               )}
               onClick={() => setIsLoading(true)}
             >
-             Cơ hội nghề nghiệp
+              Cơ hội nghề nghiệp
             </Link>
           </nav>
         </Fade>
@@ -112,7 +112,7 @@ export default function News({
                 <div className='md:col-span-2 md:row-span-3 h-[15.65rem] md:h-[36.375rem]'>
                   {dataPosts && (
                     <Link
-                      href={`/tin-tuc/${dataPosts.events[0].detail_link}`}
+                      href={`/tin-tuc/${dataPosts?.events?.[0]?.detail_link}`}
                       className='relative block w-full h-full rounded-[0.75rem] overflow-hidden group tin-tuc-item'
                     >
                       <Image
@@ -152,7 +152,7 @@ export default function News({
                       return (
                         <Link
                           key={i}
-                          href={`/tin-tuc/${item.detail_link}`}
+                          href={`/tin-tuc/${item?.detail_link}`}
                           className='relative rounded-[0.75rem] border border-[#E9E9E9] flex flex-row items-center p-[0.79rem] md:px-[1.13rem] md:py-4 overflow-hidden group max-md:-mt-2 first-of-type:mt-0 hover:border-yellow-500 transition-500 tin-tuc-item'
                         >
                           <div className='size-[8rem] md:size-[9.3125rem] overflow-hidden rounded-[0.5rem] flex-none'>
@@ -214,7 +214,7 @@ export default function News({
                   return (
                     <Link
                       key={i}
-                      href={`/tin-tuc/${item.detail_link}`}
+                      href={`/tin-tuc/${item?.detail_link}`}
                       className='relative md:h-[25rem] flex flex-row max-md:items-center max-md:p-[0.79rem] md:flex-col rounded-[0.75rem] overflow-hidden border border-[#E9E9E9] group hover:border-yellow-500 transition-500 pb-[1.5rem] tin-tuc-item'
                     >
                       <div className='max-md:size-[8rem] rounded-t-[0.5rem] flex-none md:h-[60%] overflow-hidden'>

@@ -1,4 +1,3 @@
-import React from 'react'
 import ProjectDetails from '@/sections/chi-tiet-du-an'
 import getDataSlug from '@/lib/getDataSlug'
 import getData from '@/lib/getData'

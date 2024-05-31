@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import {useState, useEffect, useRef} from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import ButtonSlide from '@/components/buttonSlideSixReasons/ButtonSLide'
@@ -30,11 +30,11 @@ const SecondReasons = ({lang, isMobile, data}) => {
     if (!showAllSecond && activeIndex !== null) {
       setMaxHeightSecond('24.5rem')
     }
-    if(showAllSecond && activeIndex === null){
-      setMaxHeightSecond(`${4.2 * (data?.list_system?.length)}rem`);
+    if (showAllSecond && activeIndex === null) {
+      setMaxHeightSecond(`${4.2 * data?.list_system?.length}rem`)
     }
-    if(showAllSecond && activeIndex !== null){
-      setMaxHeightSecond(`${4.2 * (data?.list_system?.length)+13}rem`);
+    if (showAllSecond && activeIndex !== null) {
+      setMaxHeightSecond(`${4.2 * data?.list_system?.length + 13}rem`)
     }
   }, [activeIndex, showAllSecond])
   //handle load more second

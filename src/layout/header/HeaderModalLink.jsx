@@ -1,3 +1,4 @@
+'use client'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -14,7 +15,7 @@ export default function HeaderModalLink({
   if (isLink) {
     return (
       <Link
-        href={href}
+        href={href || '/'}
         className='relative w-fit font-Iciel text-1.25 flex flex-row items-center group opacity-60 hover:opacity-100 transition-300 py-[0.9rem]'
         onClick={handleOnClick}
         onMouseEnter={handleOnMouseLeave}

@@ -1,5 +1,5 @@
 import FamilyElevator from '@/sections/thang-may-page-details/FamilyElevator'
-import React from 'react'
+
 import getDataSlug from '@/lib/getDataSlug'
 import {fetchMetaData} from '@/lib/fetchMetadata'
 import {getMeta} from '@/lib/getMeta'

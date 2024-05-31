@@ -1,5 +1,5 @@
 import DichVu from '@/sections/dichvu'
-import React from 'react'
+
 import getDataSlug from '@/lib/getDataSlug'
 import {fetchMetaData} from '@/lib/fetchMetadata'
 import {getMeta} from '@/lib/getMeta'
@@ -13,6 +13,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({params}) {
   const result = await fetchMetaData(`/service/${params.slug}/`)
+  console.log('🚀 ~ generateMetadata ~ result:', result)
   return getMeta(result, `/service/${params.slug}`, `Dịch vụ - SANYO YUSOKI`)
 }
 

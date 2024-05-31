@@ -1,5 +1,5 @@
 'use client'
-import React, {useRef, useState, useEffect} from 'react'
+import {useRef, useState, useEffect} from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -34,7 +34,7 @@ export default function SlideValue({isMobile, data}) {
           speed={400}
           centeredSlides={!isMobile && true}
           onSlideChange={(swiper) => handleChangeSlide(swiper)}
-          initialSlide={!isMobile?slideImages?.length:0}
+          initialSlide={!isMobile ? slideImages?.length : 0}
           navigation={{
             prevEl: '.btn-prev-cus-value',
             nextEl: '.btn-next-cus-value',

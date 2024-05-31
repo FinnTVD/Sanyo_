@@ -13,11 +13,13 @@ export default function DropdownItem({
     <li
       onClick={handleOnClick}
       className={
-        disabled ? 'pointer-events-none opacity-60' : 'pointer-events-auto opacity-100'
+        disabled
+          ? 'pointer-events-none opacity-60'
+          : 'pointer-events-auto opacity-100'
       }
     >
       <Link
-        href={href}
+        href={href || '/'}
         className='flex flex-row items-center px-3.5 py-2 md:px-4 md:py-[0.4rem] flex-none cursor-pointer select-none last:max-md:pb-4'
       >
         <div

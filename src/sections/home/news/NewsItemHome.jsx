@@ -1,6 +1,6 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 import './style.css'
 function NewsItemHome({className, data}) {
   return (
@@ -12,7 +12,10 @@ function NewsItemHome({className, data}) {
         href={`tin-tuc/${data.post_slug}`}
       >
         <Image
-          src={data?.thumbnail||"https://cms.sanyoyusoki.com/wp-content/uploads/2024/05/service-2.jpg"}
+          src={
+            data?.thumbnail ||
+            'https://cms.sanyoyusoki.com/wp-content/uploads/2024/05/service-2.jpg'
+          }
           alt='image'
           quality={100}
           width={500}
@@ -51,7 +54,7 @@ function NewsItemHome({className, data}) {
           </span>
         </div>
         <h3 className='text-white font-Iciel text-[0.875rem] lg:text-[1.3rem] font-medium leading-1.5 md:w-[17.5rem] line-clamp-2 text-ellipsis'>
-          <Link href={`tin-tuc/${data.post_slug}`}>{data.title}</Link>
+          <Link href={`tin-tuc/${data?.post_slug}`}>{data?.title}</Link>
         </h3>
       </div>
       <Image

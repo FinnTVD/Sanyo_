@@ -1,8 +1,8 @@
 'use client'
 import Image from 'next/image'
-import React, {useRef, useState} from 'react'
+import {useRef, useState} from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react'
-import {Pagination,FreeMode} from 'swiper/modules'
+import {Pagination, FreeMode} from 'swiper/modules'
 import {Button} from '@/components/ui/button'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -25,10 +25,13 @@ export default function SliderMbJapanElevator({data}) {
         slidesPerView={1.1}
         spaceBetween={0}
         loop={true}
-        modules={[Pagination,FreeMode]}
+        modules={[Pagination, FreeMode]}
       >
         {data?.map((item, index) => (
-          <SwiperSlide key={index}  className='mt-4 pl-3 rounded-[0.5rem]  overflow-hidden '>
+          <SwiperSlide
+            key={index}
+            className='mt-4 pl-3 rounded-[0.5rem]  overflow-hidden '
+          >
             <div className='rounded-[0.5rem] border-[1px] solid border-[rgba(254,65,39,0.3)] bg-opacity-30 relative overflow-hidden bg-[linear-gradient(180deg,rgba(254,65,39,0.40)0%,rgba(255,255,255,0.40)89.5%);]'>
               <Link
                 href={`/thang-may-nhat-ban/${item?.elevator?.slug_detail?.slug}`}
@@ -55,10 +58,10 @@ export default function SliderMbJapanElevator({data}) {
                 className='h-[17.75644rem] w-full object-cover rounded-[0.5rem] mb-[1.05rem]'
               />
               <h3 className='text-c-nht text-[1rem] font-SVNLagu font-medium px-[0.87rem] leading-1.5 mb-[0.5rem]'>
-               {item?.title}
+                {item?.title}
               </h3>
               <p className='mb-[0.75rem] px-[0.87rem] text-[0.75rem] leading-1.5 text-ellipsis line-clamp-5 text-grey-900'>
-               {item?.elevator?.mo_ta}
+                {item?.elevator?.mo_ta}
               </p>
 
               <div className='flex items-center max-md:px-[0.88rem] max-md:mb-[4.75rem]'>
@@ -76,7 +79,7 @@ export default function SliderMbJapanElevator({data}) {
                       TỐC ĐỘ
                     </span>
                     <span className='text-gray-900 font-Iciel font-medium leading-[1.29] block md:tracking-[-0.03125rem] max-md:text-[0.75rem]'>
-                     {item?.elevator?.rated_speed}m.s
+                      {item?.elevator?.rated_speed}m.s
                     </span>
                   </div>
                 </div>
@@ -95,7 +98,8 @@ export default function SliderMbJapanElevator({data}) {
                       tải trọng
                     </span>
                     <span className='text-grey-900 font-Iciel font-medium block leading-[1.29] md:tracking-[-0.03125rem] max-md:text-[0.75rem]'>
-                    {item?.elevator?.rated_load} - {item?.elevator?.rated_load_2}
+                      {item?.elevator?.rated_load} -{' '}
+                      {item?.elevator?.rated_load_2}
                     </span>
                   </div>
                 </div>

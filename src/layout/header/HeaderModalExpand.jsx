@@ -1,3 +1,4 @@
+'use client'
 import clsx from 'clsx'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -33,7 +34,7 @@ export default function HeaderModalExpand({
           return (
             <Link
               key={i1}
-              href={item1.href}
+              href={item1?.href || '/'}
               className='font-Iciel text-0.875 leading-1.5 uppercase opacity-60 px-6 py-[0.62rem] text-white border-b-[0.0625rem] border-white/10 hover:text-yellow-500 transition-300 hover:opacity-100 flex flex-row items-center group'
               onMouseEnter={() => {
                 setActiveModalMenuLink(text)
@@ -57,7 +58,7 @@ export default function HeaderModalExpand({
         })}
         {href && (
           <Link
-            href={href}
+            href={href || '/'}
             className='font-Iciel text-0.875 leading-1.5 uppercase px-6 py-[0.8rem] text-white font-bold underline hover:bg-yellow-500 transition-300 text-center'
             onMouseEnter={() => {
               setActiveModalMenuLink(text)

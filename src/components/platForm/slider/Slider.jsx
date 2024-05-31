@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import React, {useRef, useState} from 'react'
+import {useRef, useState} from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -28,10 +28,10 @@ export default function Slider({data}) {
         className='relative md:w-[21.625rem] md:py-[1.98rem] flex flex-col flex-shrink-0'
       >
         <h4 className='text-yellow-500 font-SVNLagu lg:text-[1.5rem] font-semibold md:leading-[1.25] md:tracking-[-0.03125rem] md:mb-[1.12rem] animate__animated animate__fadeIn'>
-          {data[activeIndex]?.title||'title'}
+          {data[activeIndex]?.title || 'title'}
         </h4>
         <p className='text-white text-justify font-Iciel lg:text-[0.875rem] leading-[1.5] md:mb-[1.81rem] animate__animated animate__fadeIn'>
-          {data[activeIndex]?.elevator.mo_ta||"mo ta"}
+          {data[activeIndex]?.elevator.mo_ta || 'mo ta'}
         </p>
         <div className='flex items-center md:mb-[1.25rem] md:pb-[1.25rem] border-b-[1px] solid border-white border-opacity-10 animate__animated animate__fadeIn'>
           <Image
@@ -130,9 +130,9 @@ export default function Slider({data}) {
             swiperRef.current = swiper
           }}
         >
-          {data.map((item, index) => (
+          {data?.map((item, index) => (
             <SwiperSlide key={index}>
-              {!item.video_upload && !item.video_ytb && (
+              {!item?.video_upload && !item?.video_ytb && (
                 <Image
                   src={item.thumbnail}
                   alt={item.title}
@@ -141,16 +141,16 @@ export default function Slider({data}) {
                   className='md:h-[36.8535rem] w-full object-cover'
                 />
               )}
-              {item.video_upload && (
+              {item?.video_upload && (
                 <ReactPlayer
-                  url={item.video_upload.url}
+                  url={item?.video_upload?.url}
                   controls
                   className='md:!h-[36.8535rem] !w-full !object-cover'
                 />
               )}
-              {item.video_ytb && (
+              {item?.video_ytb && (
                 <ReactPlayer
-                  url={item.video_ytb}
+                  url={item?.video_ytb}
                   controls
                   className='md:!h-[36.8535rem] !w-full !object-cover'
                 />

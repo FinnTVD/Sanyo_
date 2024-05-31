@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import React, {useEffect, useRef, useState} from 'react'
+import {useEffect, useRef, useState} from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -118,12 +118,17 @@ function SliderJapanElevator({data}) {
           modules={[Navigation]}
         >
           {data?.map((item, index) => (
-            <SwiperSlide key={index} className='overflow-hidden'>
+            <SwiperSlide
+              key={index}
+              className='overflow-hidden'
+            >
               {item.video_ytb ? (
                 <iframe
                   width='800'
                   height='800'
-                  src={`https://www.youtube.com/embed/${new URL(item.video_ytb).searchParams.get('v')}`}
+                  src={`https://www.youtube.com/embed/${new URL(
+                    item.video_ytb,
+                  ).searchParams.get('v')}`}
                   frameBorder='0'
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                   allowFullScreen

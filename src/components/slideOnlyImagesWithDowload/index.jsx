@@ -68,7 +68,7 @@ const SlideOnlyImagesDownload = ({data}) => {
             </div>
             <Fade triggerOnce>
               <Link
-                href={data.credential}
+                href={data?.credential || '/'}
                 target='_blank'
                 className='dowloadElevator absolute left-full bottom-[13%] w-[13.9375rem] h-[3.9375rem] flex items-center justify-center cursor-pointer '
               >

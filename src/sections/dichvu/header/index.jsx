@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import BreadcrumbContainer from '@/components/breadcrumb/BreadcrumbContainer'
 import BreadcrumbLink from '@/components/breadcrumb/BreadcrumbLink'
 import 'swiper/css'

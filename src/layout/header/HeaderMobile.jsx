@@ -1,9 +1,7 @@
 'use client'
-
 import {useEffect, useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import LangDropdown from '@/components/header/LangDropdown'
 import dynamic from 'next/dynamic'
 import GoogleTranslate from '@/components/Language'
 const DynamicModalMenuMobile = dynamic(() => import('./ModalMenuMobile'), {
@@ -24,7 +22,7 @@ export default function HeaderMobile({isMobile}) {
   return (
     <>
       <div className='h-[3.9375rem] bg-grey-0 flex flex-row items-center px-3 border-b border-grey-50'>
-        <GoogleTranslate isMobile={isMobile}/>
+        <GoogleTranslate isMobile={isMobile} />
         <Link
           href={`/`}
           className='absolute flex flex-row items-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'

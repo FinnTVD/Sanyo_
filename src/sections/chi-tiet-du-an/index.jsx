@@ -1,4 +1,3 @@
-import React from 'react'
 import HeaderProject from './header'
 import ListElevatorDuAn from './danh-sach-thang-may'
 import ListOtherProjects from './danh-sach-du-an-khac'

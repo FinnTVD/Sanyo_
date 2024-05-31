@@ -1,9 +1,9 @@
+'use client'
 import * as React from 'react'
 import {Slot} from '@radix-ui/react-slot'
 import {cva} from 'class-variance-authority'
 
 import {cn} from '@/lib/utils'
-import Image from 'next/image'
 import clsx from 'clsx'
 
 const buttonVariants = cva(

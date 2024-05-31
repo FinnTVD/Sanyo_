@@ -1,5 +1,5 @@
 'use client'
-import React, {useEffect} from 'react'
+import {useEffect} from 'react'
 import Link from 'next/link'
 import AOS from 'aos'
 import Image from 'next/image'
@@ -9,7 +9,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import '../styles.css'
-import "aos/dist/aos.css";
+import 'aos/dist/aos.css'
 import ButtonSlide from '@/components/buttonSlideSixReasons/ButtonSLide'
 import './styles.css'
 const PerfectChoiceJE = ({data}) => {

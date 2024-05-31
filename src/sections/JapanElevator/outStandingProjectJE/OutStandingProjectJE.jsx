@@ -1,5 +1,5 @@
 'use client'
-import React, {useRef, useEffect} from 'react'
+import {useRef, useEffect} from 'react'
 import Link from 'next/link'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import {Navigation, Pagination, Autoplay, FreeMode} from 'swiper/modules'

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React from 'react'
+
 import './style.css'
 import Link from 'next/link'
 
@@ -8,7 +8,7 @@ export default function ReasonChoose({data}) {
     <div className='md:rounded-[1.25rem] rounded-[0.75rem] flex justify-center items-end relative reason_item w-full md:h-[32.262rem] object-cover h-[24.6875rem]'>
       <Image
         src={data?.image?.url}
-        alt={data?.image?.alt||"nothing"}
+        alt={data?.image?.alt || 'nothing'}
         width={800}
         height={500}
         className='w-full absolute h-full object-cover md:rounded-[1.25rem] rounded-[0.75rem]'

@@ -1,4 +1,3 @@
-import React from 'react'
 import JapanElevator from '@/sections/JapanElevator'
 import getData from '@/lib/getData'
 import getDataSlug from '@/lib/getDataSlug'
@@ -8,7 +7,11 @@ import {getMeta} from '@/lib/getMeta'
 
 export async function generateMetadata({params}) {
   const result = await fetchMetaData(`/thang-may-nhat-ban/`)
-  return getMeta(result, `/thang-may-nhat-ban`, 'Thang máy Nhật Bản - SANYO YUSOKI')
+  return getMeta(
+    result,
+    `/thang-may-nhat-ban`,
+    'Thang máy Nhật Bản - SANYO YUSOKI',
+  )
 }
 
 export default async function page({searchParams, params}) {

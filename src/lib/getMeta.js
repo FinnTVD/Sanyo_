@@ -26,14 +26,14 @@ export const getMeta = (result, slug, fallbackTitle) => {
       images: [],
     },
   }
-  if (result?.json?.og_image && result.json.og_image.length > 0) {
+  if (result?.json?.og_image && result?.json?.og_image?.length > 0) {
     meta.openGraph.images.push({
-      url: result.json.og_image[0]?.url,
-      width: result.json.og_image[0]?.width,
-      height: result.json.og_image[0]?.height,
+      url: result?.json?.og_image?.[0]?.url,
+      width: result?.json?.og_image?.[0]?.width,
+      height: result?.json?.og_image?.[0]?.height,
     })
     meta.twitter.images.push({
-      url: result.json.og_image[0]?.url,
+      url: result?.json?.og_image?.[0]?.url,
     })
   }
   return meta

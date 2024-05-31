@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import BreadcrumbContainer from '@/components/breadcrumb/BreadcrumbContainer'
 import BreadcrumbLink from '@/components/breadcrumb/BreadcrumbLink'
 import {Swiper, SwiperSlide} from 'swiper/react'
@@ -7,7 +7,7 @@ import Image from 'next/image'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import {Navigation, Autoplay} from 'swiper/modules'
-const HeaderProject = ({data,slide,dataTypeElevator}) => {
+const HeaderProject = ({data, slide, dataTypeElevator}) => {
   return (
     <section>
       <BreadcrumbContainer className='pl-3 md:pl-[6.25rem]'>
@@ -90,14 +90,12 @@ const HeaderProject = ({data,slide,dataTypeElevator}) => {
                 loại thang máy
               </span>
               <span className='text-grey-900 font-semibold uppercase max-md:text-[0.6875rem]'>
-                {dataTypeElevator?.map(
-                  (item, index, array) => (
-                    <span key={index}>
-                      {item.name}
-                      {index < array.length - 1 ? ', ' : ''}
-                    </span>
-                  ),
-                )}
+                {dataTypeElevator?.map((item, index, array) => (
+                  <span key={index}>
+                    {item.name}
+                    {index < array.length - 1 ? ', ' : ''}
+                  </span>
+                ))}
               </span>
             </div>
           </div>
@@ -124,7 +122,7 @@ const HeaderProject = ({data,slide,dataTypeElevator}) => {
           modules={[Navigation, Autoplay]}
           className='mySwiperduan'
         >
-          {(slide||[]).map((item, index) => (
+          {(slide || []).map((item, index) => (
             <SwiperSlide key={index}>
               <Image
                 src={item?.image?.url}

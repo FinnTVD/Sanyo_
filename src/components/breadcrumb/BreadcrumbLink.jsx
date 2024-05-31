@@ -5,7 +5,7 @@ export default function BreadcrumbLink({isLastLink, children, href}) {
   if (href) {
     return (
       <Link
-        href={href}
+        href={href || '/'}
         className={clsx(
           'text-grey-700 flex-none font-Iciel text-0.625 md:text-0.875 font-medium leading-1.5 text-justify uppercase',
           {

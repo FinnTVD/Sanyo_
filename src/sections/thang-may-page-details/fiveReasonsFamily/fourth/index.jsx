@@ -1,14 +1,13 @@
 'use client'
-import React, {useState} from 'react'
+import {useState} from 'react'
 import Image from 'next/image'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import '../styles.css'
-import { Fade } from 'react-awesome-reveal'
-const FourthReason = ({lang, isMobile,data}) => {
-
+import {Fade} from 'react-awesome-reveal'
+const FourthReason = ({lang, isMobile, data}) => {
   const dataSecond = [
     {
       title: 'Cửa chống cháy EI45',
@@ -106,20 +105,29 @@ const FourthReason = ({lang, isMobile,data}) => {
         </div>
         <div className='w-[50%]  relative max-md:w-full'>
           <div className='pt-[3.12rem] pl-[3.94rem] pr-[6.37rem] pb-[7rem] max-md:px-3 max-md:py-0 max-md:pt-[3.5rem]'>
-   <Fade direction='up' triggerOnce={true}>
+            <Fade
+              direction='up'
+              triggerOnce={true}
+            >
               <h3
                 className={`font-SVNLagu text-[3.125rem] leading-1.3 font-semibold w-[31.125rem] mb-[0.75rem] max-md:text-[1.25rem]`}
               >
-                 <span className='font-SVNLagu text-[3.125rem] leading-1.3 font-semibold mb-[1.5rem] max-md:text-[1.25rem] max-md:mb-2 md:hidden'>4. </span>{data?.heading}
+                <span className='font-SVNLagu text-[3.125rem] leading-1.3 font-semibold mb-[1.5rem] max-md:text-[1.25rem] max-md:mb-2 md:hidden'>
+                  4.{' '}
+                </span>
+                {data?.heading}
               </h3>
-              <span className='font-Iciel text-[1.125rem] text-[rgba(28,32,28,0.70)] leading-1.5 font-normal mb-[1.88rem] block max-md:text-[0.875rem]'>Tiêu chuẩn EI trong chống cháy chính là bộ tiêu chuẩn quy định về giới hạn chịu lửa của các vật liệu chống cháy.</span>
-              <div
-                className='secondReasons'
-              >
-                {(data?.list_doors||[]).map((item, index) => (
+              <span className='font-Iciel text-[1.125rem] text-[rgba(28,32,28,0.70)] leading-1.5 font-normal mb-[1.88rem] block max-md:text-[0.875rem]'>
+                Tiêu chuẩn EI trong chống cháy chính là bộ tiêu chuẩn quy định
+                về giới hạn chịu lửa của các vật liệu chống cháy.
+              </span>
+              <div className='secondReasons'>
+                {(data?.list_doors || []).map((item, index) => (
                   <div
                     className={`itemShowmore mb-[1.25rem] border-b border-[rgba(28,32,28,0.10)] pb-5 ${
-                      expandedIndex === index ? 'h-[7.5rem] max-md:h-[6.5rem]' : 'h-[3.25rem] max-md:h-[2.75rem] max-md:last:border-none max-md:last:mb-0'
+                      expandedIndex === index
+                        ? 'h-[7.5rem] max-md:h-[6.5rem]'
+                        : 'h-[3.25rem] max-md:h-[2.75rem] max-md:last:border-none max-md:last:mb-0'
                     } overflow-hidden`}
                     key={index}
                   >
@@ -152,8 +160,7 @@ const FourthReason = ({lang, isMobile,data}) => {
                   </div>
                 ))}
               </div>
-   </Fade>
-        
+            </Fade>
           </div>
         </div>
       </div>

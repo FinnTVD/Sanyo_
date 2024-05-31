@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+
 import Link from 'next/link'
 
 import Image from 'next/image'
@@ -41,7 +41,7 @@ const ProductLine = ({data, isMobile}) => {
         </div>
         <Fade triggerOnce>
           <Link
-            href={data?.file_dowload_url}
+            href={data?.file_dowload_url || '/'}
             target='_blank'
             className='dowloadfileJE w-[10.6875rem] h-[10.6875rem] rounded-[50%] ml-[14rem] bg-[#FE4127] flex items-center justify-center flex-col relative mt-[1%] max-md:hidden z-10'
           >
