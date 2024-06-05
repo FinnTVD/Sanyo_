@@ -12,7 +12,6 @@ import {getMeta} from '@/lib/getMeta'
 
 export async function generateMetadata() {
   const result = await fetchMetaData('/trang-chu/')
-  console.log('🚀 ~ generateMetadata ~ result:', result)
   return getMeta(result, '', 'Trang chủ - SANYO YUSOKI')
 }
 const pageId = 11
